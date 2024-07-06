@@ -22,7 +22,7 @@ const QuizResult = () => {
     if (userName) {
       const fetchUserId = async () => {
         try {
-          const response = await axios.get(`https://careerdhrishti-backend.onrender.com/api/users?name=${userName}`);
+          const response = await axios.get(`https://careerdrishti-fsm-backend.onrender.com/api/users?name=${userName}`);
           setUserId(response.data.userId);
           console.log("result",userId)
         } catch (error) {
@@ -48,7 +48,7 @@ const QuizResult = () => {
 
       const submitResults = async () => {
         try {
-          const response = await axios.post('https://careerdhrishti-backend.onrender.com/api/quiz-results', resultData);
+          const response = await axios.post('https://careerdrishti-fsm-backend.onrender.com/api/quiz-results', resultData);
           console.log(response);
           setMessage('Quiz results submitted successfully!');
         } catch (error) {
